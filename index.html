@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const school = {
+            name : "USC"
+        };
+        var reverseArrayInPlace = (arr) => {
+            let counter = 0;
+            for (let i = 1; i < arr.length; i++) {
+                let temp = arr[arr.length - 1];
+                for (let j = arr.length - 2; j > counter - 1; j--) {
+                    arr[j + 1] = arr[j]
+                }
+                arr[counter] = temp;
+                counter++;
+            }
+        }
+
+        function test() {
+            school.name = "UP"
+            console.log(school.name);  
+            
+        }
+        
+        var users = [1,"s2","s3"]
+
+        // users.push("s4")
+        users.pop()
+       
+        console.log( users.map((user) => user + " 1 "));
+        
+
+        test()
+        reverseArrayInPlace([5, 4, 3, 2, 1])
+    </script>
+</body>
+
+</html>
